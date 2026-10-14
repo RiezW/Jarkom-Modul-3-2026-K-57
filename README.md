@@ -1,11 +1,18 @@
 # Jarkom-Modul-3-2026-K-57
 
+| | |
+|---|---|
+| **Nama** | : Riezco Eka Bayu Witantra & Sulthan Daffa Al Hasyimi |
+| **NRP** | : 5027251057 & 5027251091 |
+| **Kelompok** | : K-57 |
+| **Mata Kuliah** | : JarKom |
+
+---
+
 Laporan resmi Praktikum Komunikasi Data dan Jaringan Komputer Modul 3: **Curtain Protocol: Shibuya Incident** (DHCP, DNS, Database, Reverse Proxy, dan Load Balancing).
 
 | | |
 |---|---|
-| Kelompok | K-57 |
-| Anggota | (isi nama dan NRP anggota) |
 | Prefix IP | `10.92` |
 | Domain | `jujutsu.K57.com` |
 | Database | `db_shibuya_K57` |
