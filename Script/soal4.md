@@ -2,6 +2,11 @@
    ```bash
    ip link show eth0
    ```
+    itadori (Dev): 02:42:b2:4f:49:00 <br>
+    fushiguro (Dev): f2:dd:ec:51:c9:cb <br>
+    zenin (Support): 02:42:54:1c:11:00 <br>
+    okkotsu (Support): 02:42:0d:ec:d7:00 <br>
+
     ![alt text](<Assets/No4_mac fushiguro.png>)
     ![alt text](<Assets/No4_mac itadori.png>)
     ![alt text](<Assets/No4_mac okkotsu.png>)
