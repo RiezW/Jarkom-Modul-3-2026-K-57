@@ -124,7 +124,7 @@
     ```bash
     auto eth0
     iface eth0 inet static
-        address 10.92.4.9
+        address 10.92.4.8
         netmask 255.255.255.0
         gateway 10.92.4.1
         up bash /root/script.sh
@@ -133,7 +133,7 @@
     ```bash
     auto eth0
     iface eth0 inet static
-        address 10.92.4.10
+        address 10.92.4.11
         netmask 255.255.255.0
         gateway 10.92.4.1
         up bash /root/script.sh
