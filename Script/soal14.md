@@ -216,3 +216,22 @@ curl -i http://10.92.4.6/api/
 ![Akses langsung dari itadori ditolak](<Assets/No14_09_itadori-direct-denied.png>)
 
 Hasil: web worker maki dan worker API nanami sama-sama membalas `HTTP/1.1 403 Forbidden` dari nginx, karena itadori bukan gojo atau geto.
+
+### 6. Melalui reverse proxy berhasil, akses langsung ditolak (setelah Soal 15 dan 16)
+Pada **kusakabe** (client Network 3, memakai DNS utahime/shoko):
+
+```bash
+curl -i http://jujutsu.K57.com/
+curl -i http://10.92.4.4/
+curl -i http://jujutsu.K57.com/api/
+curl -i http://10.92.4.6/api/
+```
+
+![Melalui proxy 200, langsung 403](<Assets/No14_10_kusakabe-proxy-vs-direct.png>)
+
+Hasil: melalui domain (gojo) web dijawab `HTTP/1.1 200 OK` (`served by panda`) dan `/api/` dijawab `200 OK` dengan JSON dari `nanami`. Akses langsung dari client yang sama ke maki (`10.92.4.4`) dan nanami (`10.92.4.6`) ditolak dengan `403 Forbidden`.
+
+## Catatan
+- Web worker: `allow 10.92.1.4;` (gojo) dan `deny all;`. Worker API: `allow 10.92.4.3;` (geto) dan `deny all;`.
+- Pembatasan ini bekerja karena NAT di jichi hanya berlaku untuk `-o eth0` (Soal 1), sehingga worker melihat alamat sumber asli dari setiap koneksi.
+- Request yang ditolak (403) berhenti di nginx dan tidak sampai ke PHP, sehingga tidak tercatat di `request_logs`.
